@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DrawerItem extends StatelessWidget {
+class BaseDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -15,7 +15,7 @@ class DrawerItem extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home),
-            title: Text('Home'),
+            title: Text('About'),
             onTap: () {
               Navigator.pushNamed(context, '/');
             },
@@ -25,6 +25,13 @@ class DrawerItem extends StatelessWidget {
             title: Text('Explore'),
             onTap: () {
               Navigator.pushNamed(context, '/explore');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.smartphone),
+            title: Text('Sample'),
+            onTap: () {
+              Navigator.pushNamed(context, '/sample');
             },
           ),
           ListTile(

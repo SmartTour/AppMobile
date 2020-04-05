@@ -3,7 +3,6 @@ import 'package:flutter_blue/flutter_blue.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_tour_mobile/helpers/BeaconHelper.dart';
 import 'package:smart_tour_mobile/layout/DefaulLayout.dart';
-import 'package:smart_tour_mobile/services/BlueService.dart';
 import 'package:smart_tour_mobile/state/BeaconsState.dart';
 
 class BeaconsScreen extends StatefulWidget {

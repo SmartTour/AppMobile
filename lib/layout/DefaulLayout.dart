@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_tour_mobile/components/DrawerItem.dart';
+import 'package:smart_tour_mobile/components/drawers/BaseDrawer.dart';
 
 class DefaultLayout extends StatelessWidget {
   final String titleAppBar;
@@ -17,7 +17,7 @@ class DefaultLayout extends StatelessWidget {
       appBar: AppBar(
         title: Text(this.titleAppBar),
       ),
-      drawer: DrawerItem(),
+      drawer: BaseDrawer(),
       body: this.child,
       floatingActionButton: this.floatingActionBotton,
     );

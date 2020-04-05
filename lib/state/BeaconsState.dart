@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_blue/flutter_blue.dart';
 import 'package:smart_tour_mobile/services/BlueService.dart';
 import 'package:smart_tour_mobile/services/LocationService.dart';

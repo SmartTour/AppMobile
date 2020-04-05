@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:smart_tour_mobile/screens/HomeScreen.dart';
-import 'package:smart_tour_mobile/screens/SettingsScreen.dart';
+import 'package:smart_tour_mobile/screens/AboutScreen.dart';
 import 'package:smart_tour_mobile/screens/ExploreScreen.dart';
+import 'package:smart_tour_mobile/screens/SettingsScreen.dart';
+import 'package:smart_tour_mobile/screens/SampleScreen.dart';
 import 'package:smart_tour_mobile/screens/BeaconsScreen.dart';
+
+import 'package:smart_tour_mobile/screens/smartTour/InfoScreen.dart';
+import 'package:smart_tour_mobile/screens/smartTour/ToursScreen.dart';
+import 'package:smart_tour_mobile/screens/smartTour/QuizScreen.dart';
+import 'package:smart_tour_mobile/screens/smartTour/CommunityScreen.dart';
+
 import 'package:smart_tour_mobile/state/BeaconsState.dart';
 import 'package:smart_tour_mobile/state/SettingsState.dart';
+import 'package:smart_tour_mobile/state/SmartTourState.dart';
 
 void main() => runApp(MultiProvider(providers: [
       ChangeNotifierProvider(create: (context) => SettingsState()),
-      ChangeNotifierProvider(create: (context) => BeaconsState())
+      ChangeNotifierProvider(create: (context) => BeaconsState()),
+      ChangeNotifierProvider(create: (context) => SmartTourState())
     ], child: MyApp()));
 
 class MyApp extends StatelessWidget {
@@ -32,10 +41,15 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
-        '/settings': (context) => SettingsScreen(),
+        '/': (context) => AboutScreen(),
         '/explore': (context) => ExploreScreen(),
-        '/beacons': (context) => BeaconsScreen()
+        '/settings': (context) => SettingsScreen(),
+        '/sample': (context) => SampleScreen(),
+        '/beacons': (context) => BeaconsScreen(),
+        '/smart-tour/info': (context) =>InfoScreen(),
+        '/smart-tour/tours': (context) => ToursScreen(),
+        '/smart-tour/quiz': (context) => QuizScreen(),
+        '/smart-tour/community': (context) => CommunityScreen(),
       },
     );
   }

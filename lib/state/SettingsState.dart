@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:smart_tour_mobile/services/LocationService.dart';
 
 class SettingsState extends ChangeNotifier {
