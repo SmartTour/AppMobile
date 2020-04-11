@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:smart_tour_mobile/components/TourCard.dart';
+import 'package:smart_tour_mobile/components/TourList.dart';
 import 'package:smart_tour_mobile/layout/SmartTourLayout.dart';
 import 'package:smart_tour_mobile/state/SmartTourState.dart';
 
@@ -48,11 +48,21 @@ class _ToursScreenState extends State<ToursScreen>
             controller: _tabController,
             children: <Widget>[
               Container(
-                child: Center(child: TourCard(tour: state.listLiveTour[0])),
-              ),
+                  child: TourList(
+                list: state.listLiveTour,
+                exploreFunciton: () {
+                  Navigator.pushNamed(context, '/smart-tour/live-tour',
+                      arguments: state.listLiveTour[0].detectionParameters[0]);
+                },
+              )),
               Container(
-                child: Center(child: TourCard(tour: state.listBaseTour[0])),
-              ),
+                  child: TourList(
+                list: state.listBaseTour,
+                exploreFunciton: () {
+                  Navigator.pushNamed(context, '/smart-tour/base-tour',
+                      arguments: state.listBaseTour[0].contents);
+                },
+              )),
             ],
           ));
     });

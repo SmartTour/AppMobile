@@ -3,8 +3,10 @@ import 'package:provider/provider.dart';
 import 'package:smart_tour_mobile/screens/AboutScreen.dart';
 import 'package:smart_tour_mobile/screens/ExploreScreen.dart';
 import 'package:smart_tour_mobile/screens/SettingsScreen.dart';
-import 'package:smart_tour_mobile/screens/SampleScreen.dart';
 import 'package:smart_tour_mobile/screens/BeaconsScreen.dart';
+import 'package:smart_tour_mobile/screens/screensWidget/BaseTourScreen.dart';
+import 'package:smart_tour_mobile/screens/screensWidget/LiveTourScreen.dart';
+import 'package:smart_tour_mobile/screens/screensWidget/TourViewerScreen.dart';
 
 import 'package:smart_tour_mobile/screens/smartTour/InfoScreen.dart';
 import 'package:smart_tour_mobile/screens/smartTour/ToursScreen.dart';
@@ -14,6 +16,7 @@ import 'package:smart_tour_mobile/screens/smartTour/CommunityScreen.dart';
 import 'package:smart_tour_mobile/state/BeaconsState.dart';
 import 'package:smart_tour_mobile/state/SettingsState.dart';
 import 'package:smart_tour_mobile/state/SmartTourState.dart';
+import 'package:smart_tour_mobile/theme/BaseTheme.dart';
 
 void main() => runApp(MultiProvider(providers: [
       ChangeNotifierProvider(create: (context) => SettingsState()),
@@ -27,29 +30,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Smart Tour Mobile',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
+      theme: BaseTheme.data(),
       initialRoute: '/',
       routes: {
         '/': (context) => AboutScreen(),
         '/explore': (context) => ExploreScreen(),
         '/settings': (context) => SettingsScreen(),
-        '/sample': (context) => SampleScreen(),
         '/beacons': (context) => BeaconsScreen(),
-        '/smart-tour/info': (context) =>InfoScreen(),
+        '/smart-tour/info': (context) => InfoScreen(),
         '/smart-tour/tours': (context) => ToursScreen(),
         '/smart-tour/quiz': (context) => QuizScreen(),
         '/smart-tour/community': (context) => CommunityScreen(),
+        '/smart-tour/live-tour': (context) => LiveTourScreen(),
+        '/smart-tour/base-tour': (context) => BaseTourScreen(),
+        '/smart-tour/tour-viewer': (context) => TourViewerScreen(),
       },
     );
   }

@@ -34,7 +34,7 @@ class SmartTourDrawer extends StatelessWidget {
             leading: Icon(Icons.home),
             title: Text('Quiz'),
             onTap: () {
-              Navigator.pushNamed(context, '/smart-tour/tours');
+              Navigator.pushNamed(context, '/smart-tour/quiz');
             },
           ),
           ListTile(

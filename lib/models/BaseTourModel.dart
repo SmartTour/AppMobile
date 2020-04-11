@@ -12,6 +12,6 @@ class BaseTourModel {
       : id = json['ID'],
         title = json['Title'],
         urlImage = json['UrlImage'],
-        description = json['Descriprion'],
+        description = json['Description'],
         contents = JsonHelper.listContentFromJson(json['Contents']);
 }

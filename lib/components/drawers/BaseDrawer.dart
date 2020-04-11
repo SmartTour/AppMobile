@@ -28,13 +28,6 @@ class BaseDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.smartphone),
-            title: Text('Sample'),
-            onTap: () {
-              Navigator.pushNamed(context, '/sample');
-            },
-          ),
-          ListTile(
             leading: Icon(Icons.bluetooth_connected),
             title: Text('Beacons'),
             onTap: () {

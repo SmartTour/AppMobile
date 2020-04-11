@@ -45,5 +45,10 @@
 		<string>This app requires access to your location for FilledStacks tutorial.</string>
 		<key>NSLocationAlwaysUsageDescription</key>
 		<string>This app requires access to your location for FilledStacks tutorial.</string>
+		<key>NSAppTransportSecurity</key>
+		<dict>
+			<key>NSAllowsArbitraryLoads</key>
+			<true/>
+		</dict>
 	</dict>
 </plist>
