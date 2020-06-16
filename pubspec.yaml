@@ -14,7 +14,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -22,11 +22,12 @@ dependencies:
 
   http: 0.12.0+4
   provider: 4.0.4
-  flutter_blue: 0.7.0
+  flutter_blue: 0.7.2
   location_permissions: 2.0.5
   location: 3.0.2
   simple_animations: 1.3.11
   flutter_html_view: 0.5.12
+  flutter_launcher_icons: 0.7.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -38,7 +39,10 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/launcher/logo.png"
 # The following section is specific to Flutter.
 flutter:
   # The following line ensures that the Material Icons font is
@@ -48,10 +52,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/config.json
     - assets/sample-data.json
     - assets/smart-tour-data.json
     - assets/tourLive1.jpg
     - assets/tourBase1.jpg
+    - assets/logoWhite.png
+    - assets/images/backgroundBar.png
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

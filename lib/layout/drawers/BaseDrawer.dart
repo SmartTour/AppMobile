@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SmartTourDrawer extends StatelessWidget {
+class BaseDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -20,35 +20,35 @@ class SmartTourDrawer extends StatelessWidget {
             leading: Icon(Icons.info),
             title: Text('Info'),
             onTap: () {
-              Navigator.pushNamed(context, '/smart-tour/info');
+              Navigator.pushNamed(context, '/');
             },
           ),
           ListTile(
             leading: Icon(Icons.explore),
             title: Text('Tours'),
             onTap: () {
-              Navigator.pushNamed(context, '/smart-tour/tours');
+              Navigator.pushNamed(context, '/tours');
             },
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Quiz'),
+            leading: Icon(Icons.explore),
+            title: Text('Explore'),
             onTap: () {
-              Navigator.pushNamed(context, '/smart-tour/quiz');
+              Navigator.pushNamed(context, '/explore');
             },
           ),
           ListTile(
-            leading: Icon(Icons.chrome_reader_mode),
-            title: Text('Ask & fac'),
+            leading: Icon(Icons.bluetooth_connected),
+            title: Text('Beacons'),
             onTap: () {
-              Navigator.pushNamed(context, '/smart-tour/community');
+              Navigator.pushNamed(context, '/beacons');
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings_backup_restore),
-            title: Text('Go Back'),
+            leading: Icon(Icons.settings),
+            title: Text('Settings'),
             onTap: () {
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, '/settings');
             },
           ),
         ],

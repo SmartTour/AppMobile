@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_tour_mobile/components/TourList.dart';
-import 'package:smart_tour_mobile/layout/SmartTourLayout.dart';
+import 'package:smart_tour_mobile/layout/DefaultLayout.dart';
 import 'package:smart_tour_mobile/state/SmartTourState.dart';
 
 class ToursScreen extends StatefulWidget {
@@ -32,7 +32,7 @@ class _ToursScreenState extends State<ToursScreen>
   @override
   Widget build(BuildContext context) {
     return Consumer<SmartTourState>(builder: (context, state, child) {
-      return SmartTourLayout(
+      return DefaultLayout(
           titleAppBar: 'Tours',
           silverAppBar: true,
           bottomNavigationBar: TabBar(
@@ -55,14 +55,14 @@ class _ToursScreenState extends State<ToursScreen>
                       arguments: state.listLiveTour[0].detectionParameters[0]);
                 },
               )),
-              Container(
-                  child: TourList(
-                list: state.listBaseTour,
-                exploreFunciton: () {
-                  Navigator.pushNamed(context, '/smart-tour/base-tour',
-                      arguments: state.listBaseTour[0].contents);
-                },
-              )),
+              // Container(
+              //     child: TourList(
+              //   list: state.listBaseTour,
+              //   exploreFunciton: () {
+              //     Navigator.pushNamed(context, '/smart-tour/base-tour',
+              //         arguments: state.listBaseTour[0].contents);
+              //   },
+              // )),
             ],
           ));
     });

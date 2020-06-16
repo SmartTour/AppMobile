@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:smart_tour_mobile/helpers/JsonHelper.dart';
 import 'package:smart_tour_mobile/models/BaseTourModel.dart';
 import 'package:smart_tour_mobile/models/LiveTourModel.dart';
-import 'package:smart_tour_mobile/services/ApiService.dart';
 
 class SmartTourState extends ChangeNotifier {
   List<BaseTourModel> listBaseTour = [];

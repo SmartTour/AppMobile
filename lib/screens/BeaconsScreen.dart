@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blue/flutter_blue.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_tour_mobile/helpers/BeaconHelper.dart';
-import 'package:smart_tour_mobile/layout/DefaulLayout.dart';
+import 'package:smart_tour_mobile/layout/DefaultLayout.dart';
 import 'package:smart_tour_mobile/state/BeaconsState.dart';
 
 class BeaconsScreen extends StatefulWidget {
@@ -36,6 +36,7 @@ class _BeaconsScreenState extends State<BeaconsScreen> {
     return Consumer<BeaconsState>(builder: (context, state, child) {
       return DefaultLayout(
           titleAppBar: "Beacons",
+          silverAppBar: true,
           child: state.listBeacons == null
               ? Center(
                   child: Text("Inizia la visita guidata"),

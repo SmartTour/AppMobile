@@ -8,7 +8,7 @@ class TourCard extends StatelessWidget {
   TourCard(
       {@required this.exploreFunction,
       @required this.title,
-      this.urlImage = 'tourLive1.jpg',
+      @required this.urlImage,
       this.description});
 
   @override
@@ -16,10 +16,12 @@ class TourCard extends StatelessWidget {
     ThemeData localTheme = Theme.of(context);
     return Card(
       // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      elevation: 4.0,
+      elevation: 2.0,
       child: Column(
         children: <Widget>[
-          Image.asset('assets/' + urlImage, fit: BoxFit.fill),
+          urlImage == null
+              ? Image.asset('assets/tourLive1.jpg', fit: BoxFit.fill)
+              : Image.network(urlImage),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(

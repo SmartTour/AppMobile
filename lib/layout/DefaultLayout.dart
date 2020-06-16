@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:smart_tour_mobile/components/SilverAppBarView.dart';
-import 'package:smart_tour_mobile/components/drawers/SmartTourDrawer.dart';
+import 'package:smart_tour_mobile/layout/bars/SilverAppBarView.dart';
+import 'package:smart_tour_mobile/layout/drawers/BaseDrawer.dart';
 
-class SmartTourLayout extends StatelessWidget {
+class DefaultLayout extends StatelessWidget {
   final String titleAppBar;
   final Widget child;
   final FloatingActionButton floatingActionBotton;
   final bool silverAppBar;
   final Widget bottomNavigationBar;
 
-  SmartTourLayout(
+  DefaultLayout(
       {@required this.titleAppBar,
       @required this.child,
       this.floatingActionBotton,
@@ -22,10 +22,8 @@ class SmartTourLayout extends StatelessWidget {
       appBar: !this.silverAppBar
           ? AppBar(
               title: Text(this.titleAppBar),
-              backgroundColor: Colors.black,
             )
           : null,
-      drawer: SmartTourDrawer(),
       body: this.silverAppBar
           ? SilverAppBarView(
               title: this.titleAppBar,

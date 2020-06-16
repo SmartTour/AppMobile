@@ -45,4 +45,9 @@ class JsonHelper {
     Map jsonMap = jsonDecode(jsonString);
     return jsonMap;
   }
+
+  static Future<Map> dataConfig() async {
+    Map jsonConfig = await JsonHelper.loadJson("config.json");
+    return jsonConfig;
+  }
 }

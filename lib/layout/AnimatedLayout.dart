@@ -35,7 +35,7 @@ class AnimatedLayout extends StatelessWidget {
               top: 20,
               right: 20,
               child: IconButton(
-                  icon: Icon(Icons.arrow_back),
+                  icon: Icon(Icons.close),
                   onPressed: () {
                     Navigator.of(context).pop();
                   }),

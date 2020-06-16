@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SilverAppBarView extends StatelessWidget {
+class BaseButtomNavigationBar extends StatelessWidget {
   final String title;
   final Widget child;
   final Color backgroundColor;
-  SilverAppBarView(
+  BaseButtomNavigationBar(
       {@required this.title,
       @required this.child,
       this.backgroundColor = Colors.black});
