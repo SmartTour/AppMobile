@@ -5,6 +5,7 @@ import 'package:smart_tour_mobile/models/ContentModel.dart';
 import 'package:smart_tour_mobile/models/DetectionParametersModel.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:smart_tour_mobile/models/LiveTourModel.dart';
+import 'package:smart_tour_mobile/models/BaseTourZoneModel.dart';
 
 class JsonHelper {
   static List<ContentModel> listContentFromJson(List<dynamic> json) {
@@ -28,6 +29,13 @@ class JsonHelper {
     List<BaseTourModel> list = [];
     json.forEach((value) {
       list.add(BaseTourModel.fromJson(value));
+    });
+    return list;
+  }
+  static List<BaseTourZoneModel> listBaseTourZoneFromJson(List<dynamic> json) {
+    List<BaseTourZoneModel> list = [];
+    json.forEach((value) {
+      list.add(BaseTourZoneModel.fromJson(value));
     });
     return list;
   }

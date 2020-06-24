@@ -21,6 +21,7 @@ class DefaultLayout extends StatelessWidget {
     return Scaffold(
       appBar: !this.silverAppBar
           ? AppBar(
+            centerTitle: true,
               title: Text(this.titleAppBar),
             )
           : null,

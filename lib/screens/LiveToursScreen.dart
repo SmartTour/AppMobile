@@ -45,7 +45,7 @@ class _LiveToursScreenState extends State<LiveToursScreen> {
         titleAppBar: "Live Tours",
         silverAppBar: true,
         child: Center(
-          child: Text('this is the Live page'),
+          child: Image(image:AssetImage('assets/images/noTours.png')) 
         ));
   }
 }

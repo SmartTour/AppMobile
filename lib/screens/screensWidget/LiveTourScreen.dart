@@ -34,7 +34,7 @@ class _LiveTourScreenState extends State<LiveTourScreen> {
                       title: this.content.title,
                       exploreFunction: () {
                         Navigator.pushNamed(context, '/smart-tour/tour-viewer',
-                            arguments: this.content.htmlContent);
+                            arguments: this.content.contentHtml);
                       }),
                 ],
               ),

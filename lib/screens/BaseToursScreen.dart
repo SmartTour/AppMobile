@@ -32,7 +32,12 @@ class _BaseToursScreenState extends State<BaseToursScreen> {
             child: baseTours != null
                 ? TourList(
                     list: baseTours,
-                    exploreFunciton: () {},
+                    // exploreFunciton: () async{
+                    //   ApiService.fetchBaseTourZones().then((value)=>{print(value.toString())})
+                    //    Navigator.pushNamed(context, '/smart-tour/live-tour',
+                    //   arguments: []);
+                
+                    // },
                   )
                 : CircularProgressIndicator(),
             onRefresh: () => updateStateBaseTours()),

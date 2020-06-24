@@ -10,18 +10,19 @@ class ExploreScreen extends StatelessWidget {
       tag: "exploreHero",
       child: AnimatedLayout(
           child: Center(
-              child: IconButton(
-                  hoverColor: Colors.black38,
-                  onPressed: () async {
-                    await Provider.of<SmartTourState>(context, listen: false)
-                        .loadSmartTour();
-                    Navigator.pushNamed(context, '/');
-                  },
-                  icon: Icon(
-                    Icons.play_circle_outline,
-                    color: Colors.white,
-                    size: 50,
-                  )))),
+            ))
+              // child: IconButton(
+              //     hoverColor: Colors.black38,
+              //     onPressed: () async {
+              //       await Provider.of<SmartTourState>(context, listen: false)
+              //           .loadSmartTour();
+              //       Navigator.pushNamed(context, '/');
+              //     },
+              //     icon: Icon(
+              //       Icons.play_circle_outline,
+              //       color: Colors.white,
+              //       size: 50,
+              //     )))),
     );
   }
 }

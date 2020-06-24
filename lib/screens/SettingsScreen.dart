@@ -60,26 +60,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     //     )));
                   },
                 ),
-                ListTile(
-                  title: Text('Endpoint Web Api'),
-                  subtitle: Text(state.urlWebApi),
-                  onTap: () {
-                    // showDialog(
-                    //     context: context,
-                    //     child: Dialog(
-                    //         child: Container(
-                    //       padding: EdgeInsets.all(26.0),
-                    //       height: 300,
-                    //       child: EditValue(
-                    //         oldValue: state.urlWebApi,
-                    //         label: "Inserire url web Api",
-                    //         onChange: (value) {
-                    //           print(value);
-                    //         },
-                    //       ),
-                    //     )));
-                  },
-                ),
+                // ListTile(
+                //   title: Text('Endpoint Web Api'),
+                //   subtitle: Text(state.urlWebApi),
+                //   onTap: () {
+                //     // showDialog(
+                //     //     context: context,
+                //     //     child: Dialog(
+                //     //         child: Container(
+                //     //       padding: EdgeInsets.all(26.0),
+                //     //       height: 300,
+                //     //       child: EditValue(
+                //     //         oldValue: state.urlWebApi,
+                //     //         label: "Inserire url web Api",
+                //     //         onChange: (value) {
+                //     //           print(value);
+                //     //         },
+                //     //       ),
+                //     //     )));
+                //   },
+                // ),
                 ListTile(
                   title: Text('Location'),
                   subtitle: Text(state.locationPermission.toString() +

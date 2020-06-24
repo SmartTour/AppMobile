@@ -1,10 +1,10 @@
 class ContentModel {
   int id;
   String title;
-  String htmlContent;
+  String contentHtml;
 
   ContentModel.fromJson(Map<String, dynamic> json)
       : id = json['ID'],
         title = json['Title'],
-        htmlContent = json['HtmlContent'];
+        contentHtml = json['contentHtml'];
 }

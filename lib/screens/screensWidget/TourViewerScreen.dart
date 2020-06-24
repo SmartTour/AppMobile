@@ -9,7 +9,7 @@ class TourViewerScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          child: HtmlViewer(
+            child:HtmlViewer(
             html: html,
           ),
         ),
