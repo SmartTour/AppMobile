@@ -1,6 +1,8 @@
 # smart_tour_mobile
 
-A new Flutter project.
+L'app di SmartTour serve agli utenti per visualizzare i vari contenuti del museo, scuola o azienda.
+Essa permette di visualizzare informazioni generali sul luogo che sta visitando, effettuare visite guidate interattivi o visualizzare contenuti particolari.
+
 
 ## Getting Started
 
